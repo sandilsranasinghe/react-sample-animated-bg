@@ -117,9 +117,9 @@ const SAbgFlyingSquareSample = styled(_SAbgFlyingSquare)`
   }
 `;
 
-export const FlyingSquaresSample = ({ children }) => {
+export const FlyingSquaresSample = ({ children, backgroundColor }) => {
   return (
-    <SAbgContainer>
+    <SAbgContainer backgroundColor={backgroundColor} >
       <SAbgFlyingSquareSample />
       <SAbgFlyingSquareSample />
       <SAbgFlyingSquareSample />

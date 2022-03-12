@@ -62,7 +62,7 @@ export const SAbgMovingGradientDiv = styled(SAbgContainer)`
   animation: ${_SAbgKeyFrameMovingBackground} 28s linear infinite;
 `;
 
-export const SAbgMovingGradientSample = ({ children }) => {
+export const MovingGradientSample = ({ children }) => {
   return (
     <SAbgMovingGradientDiv>
       <SAbgInnerContainer>{children}</SAbgInnerContainer>

@@ -6,6 +6,7 @@ export const SAbgContainer = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: ${props => props.backgroundColor || 'transparent'};
 `;
 export const SAbgInnerContainer = styled.div`
   overflow: auto;
@@ -13,9 +14,9 @@ export const SAbgInnerContainer = styled.div`
   width: 100%;
   z-index: 1;
 `;
-export const BasicContainer = ({ children, animatedBgChildren }) => {
+export const BasicContainer = ({ children, animatedBgChildren, backgroundColor }) => {
   return (
-    <SAbgContainer>
+    <SAbgContainer backgroundColor={backgroundColor} >
       {animatedBgChildren}
       <SAbgInnerContainer>{children}</SAbgInnerContainer>
     </SAbgContainer>
