@@ -8,8 +8,10 @@ export const SAbgContainer = styled.div`
   overflow: hidden;
 `;
 export const SAbgInnerContainer = styled.div`
-  overflow: scroll;
+  overflow: auto;
   height: 100%;
+  width: 100%;
+  z-index: 1;
 `;
 export const BasicContainer = ({ children, animatedBgChildren }) => {
   return (
@@ -19,20 +21,9 @@ export const BasicContainer = ({ children, animatedBgChildren }) => {
     </SAbgContainer>
   );
 };
-
-export const _SAbgKeyFrameRotate = keyframes`
-from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-`;
-export const _SAbgKeyFrameFlyUp = keyframes`
-from {
-      bottom: -10vh;
-    }
-    to {
-      bottom: 110vh;
-    }
+export const SAbgContainerWithHeight = styled.div`
+  position: relative;
+  height: ${(props) => props.height};
+  width: 100%;
+  overflow: hidden;
 `;

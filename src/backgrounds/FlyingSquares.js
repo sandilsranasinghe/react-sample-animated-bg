@@ -1,12 +1,26 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import {
   SAbgContainer,
-  SAbgInnerContainer,
-  _SAbgKeyFrameFlyUp,
-  _SAbgKeyFrameRotate,
+  SAbgInnerContainer
 } from "./common";
 
+const _SAbgKeyFrameRotate = keyframes`
+  from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+`;
+const _SAbgKeyFrameFlyUp = keyframes`
+  from {
+      bottom: -10vh;
+    }
+    to {
+      bottom: 110vh;
+    }
+`;
 const _SAbgFlyingSquare = styled.div`
   position: absolute;
   bottom: -10vh;
@@ -106,17 +120,17 @@ const SAbgFlyingSquareSample = styled(_SAbgFlyingSquare)`
 export const FlyingSquaresSample = ({ children }) => {
   return (
     <SAbgContainer>
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
-        <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
+      <SAbgFlyingSquareSample />
 
       <SAbgInnerContainer>{children}</SAbgInnerContainer>
     </SAbgContainer>
